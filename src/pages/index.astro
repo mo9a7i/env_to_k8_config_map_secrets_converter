@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+
+import { EnvConverter } from '../components/EnvConverter';
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Env to K8s Converter</title>
+    </head>
+
+    <body class="min-h-screen bg-gray-50">
+        <main class="container mx-auto p-4 h-screen">
+            <h1 class="text-3xl font-bold mb-8">Env to K8s ConfigMap & Secrets Converter</h1>
+            <EnvConverter client:load />
+        </main>
+    </body>
+</html>
